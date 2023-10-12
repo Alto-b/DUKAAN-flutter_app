@@ -3,6 +3,8 @@
 import 'package:dukaan_clone/Pages/account.dart';
 import 'package:dukaan_clone/Pages/homeScreen.dart';
 import 'package:dukaan_clone/Pages/manage.dart';
+import 'package:dukaan_clone/Pages/orders.dart';
+import 'package:dukaan_clone/Pages/catalogue.dart';
 import 'package:flutter/material.dart';
 //import 'package:student_records/Pages/splash.dart';
 
@@ -22,8 +24,8 @@ class _MyAppState extends State<MyApp> {
   int indexNum=0;
   List Screen=[
      HomePage(),
-    AccountPage(),
-    AccountPage(),
+    OrdersPage(),
+    CataloguePage(),
     ManagePage(),
     AccountPage(),
   ];
@@ -35,9 +37,11 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'dukaan-clone',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 243, 240, 240)),
+        appBarTheme: AppBarTheme(color: Color(0xff136eb4)),
+        //colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 243, 240, 240)),
         useMaterial3: true,
       ),
+      
       home: Scaffold(
           //bottom navigation bar
       bottomNavigationBar:BottomNavigationBar(
@@ -75,8 +79,8 @@ class _MyAppState extends State<MyApp> {
         ],
         currentIndex: indexNum, 
         showUnselectedLabels: true,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: const Color.fromRGBO(33, 150, 243, 1),
+        unselectedItemColor: Color.fromARGB(255, 109, 109, 109),
 
         onTap: (int index){
           setState(() {

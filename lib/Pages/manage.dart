@@ -75,7 +75,6 @@ List<String> names=[
         title: const Text("Manage Store",
         style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),),
         centerTitle: true,
-        backgroundColor: Colors.blue,
       ),
 
       //gridview

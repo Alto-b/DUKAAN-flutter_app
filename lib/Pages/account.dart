@@ -95,7 +95,7 @@ class _AccountPageState extends State<AccountPage> {
                     ListTile(
                       leading: Icon(Icons.payment),
                       onTap: (){
-                         Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentPage(),));
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentPage()));
                       },
                       title: Text("Payments"),
                       trailing: Icon(Icons.keyboard_arrow_right_outlined),

@@ -36,20 +36,33 @@ class _PremiumPageState extends State<PremiumPage> {
                    elevation: 0,
                    child: Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(60)),
-                    color: Color.fromARGB(255, 204, 202, 202)),
+                    color: Color.fromARGB(255, 246, 243, 243)),
                     //color: Color.fromARGB(255, 243, 242, 241),
                      height: 300,
                      width: 400,
                     child: Center(
                       child: Column(
                         mainAxisAlignment:MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                          children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              Icon(Icons.radio_button_off_rounded),
-                              Text("dukaan",style: TextStyle(fontSize: 50,fontWeight: FontWeight.w700),),
-                              Text("PREMIUM",style: TextStyle(color: Colors.blue),),
+                              Row(mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("dukaan",style: TextStyle(fontSize: 50,fontWeight: FontWeight.w700),),
+                                  Text("\u00AE",)
+
+                                
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SizedBox(width: 60,),
+                                  Text("PREMIUM",style: TextStyle(color: Colors.blue),),
+                                ],
+                              ),
                             ],
                           ),
                           SizedBox(height: 10,),
@@ -61,7 +74,7 @@ class _PremiumPageState extends State<PremiumPage> {
                                 style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
                                 SizedBox(height: 10,),
                               Text("All the advanced features for scaling your",
-                                style: TextStyle(color: Colors.grey),),
+                                style: TextStyle(color: Color.fromARGB(255, 128, 127, 127)),),
                               Text("business",style: TextStyle(color: Colors.grey),),
                             ],
                           ),
@@ -74,9 +87,10 @@ class _PremiumPageState extends State<PremiumPage> {
              ],
            ),
           ),
+          
           Column(
             children: [
-              
+              SizedBox(height: 20,),
               //tile1
               ListTile(
                 leading: CircleAvatar(radius:30,backgroundColor: Color.fromARGB(255, 236, 234, 234),
@@ -89,7 +103,7 @@ class _PremiumPageState extends State<PremiumPage> {
                   ],
                 ),
               ),
-
+              SizedBox(height: 20,),
               //tile2
               ListTile(
                 leading: CircleAvatar(radius:30,backgroundColor: Color.fromARGB(255, 236, 234, 234),
@@ -102,7 +116,7 @@ class _PremiumPageState extends State<PremiumPage> {
                   ],
                 ),
               ),
-
+                SizedBox(height: 20,),
               //tile3
               ListTile(
                 leading: CircleAvatar(radius:30,backgroundColor: Color.fromARGB(255, 236, 234, 234),
@@ -115,7 +129,7 @@ class _PremiumPageState extends State<PremiumPage> {
                   ],
                 ),
               ),
-              
+              SizedBox(height: 20,),
               //tile4
               ListTile(
                 leading: CircleAvatar(radius:30,backgroundColor: Color.fromARGB(255, 236, 234, 234),

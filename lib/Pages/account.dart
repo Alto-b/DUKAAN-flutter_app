@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:dukaan_clone/Pages/additional.dart';
+import 'package:dukaan_clone/Pages/payment.dart';
 import 'package:dukaan_clone/Pages/premium.dart';
 import 'package:flutter/material.dart';
 
@@ -90,6 +91,14 @@ class _AccountPageState extends State<AccountPage> {
                       leading: Icon(Icons.settings),onTap: (){},
                       title: Text("Store Settings"),
                       trailing: Icon(Icons.keyboard_arrow_down_outlined),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.payment),
+                      onTap: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentPage(),));
+                      },
+                      title: Text("Payments"),
+                      trailing: Icon(Icons.keyboard_arrow_right_outlined),
                     ),
                     ListTile(
                       leading: Icon(Icons.mobile_friendly),onTap: (){},

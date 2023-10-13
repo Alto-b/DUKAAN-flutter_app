@@ -25,11 +25,6 @@ class _CategoryPageState extends State<CategoryPage> {
     "wired",
     "Wireless"
   ];
-  // List<String> price=[
-  //   "1,20,000",
-  //   "1,00,000",
-  //   "50,000"
-  // ];
   List<String> image=[
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHAvOjeziE7vRn3Gug-ohu915CmY0noc5VWA&usqp=CAU",
     "https://www.91-cdn.com/hub/wp-content/uploads/2021/05/PIXEL-6-5K3.jpg",
@@ -58,9 +53,6 @@ class _CategoryPageState extends State<CategoryPage> {
                   children: [
                     Text(category[index],style:TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
                     Text(subcategory[index],style: TextStyle(fontSize: 15),),
-                    //Text('₹${price[index]}',),
-                    //Text('In Stock',style: TextStyle(color: Colors.green),),
-      
                   ],
                 ),
                 trailing: Padding(

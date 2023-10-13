@@ -33,10 +33,10 @@ class _PremiumPageState extends State<PremiumPage> {
                  padding: const EdgeInsets.all(15.0),
                  child: Card(
                   color:Color.fromARGB(0, 255, 255, 255),
-                   elevation: 20,
+                   elevation: 0,
                    child: Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(60)),
-                    color: Colors.white),
+                    color: Color.fromARGB(255, 204, 202, 202)),
                     //color: Color.fromARGB(255, 243, 242, 241),
                      height: 300,
                      width: 400,

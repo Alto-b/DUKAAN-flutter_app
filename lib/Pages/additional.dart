@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AdditionalInfo extends StatefulWidget {
@@ -8,11 +9,13 @@ class AdditionalInfo extends StatefulWidget {
 }
 
 class _AdditionalInfoState extends State<AdditionalInfo> {
+  bool val=false;
   List<Widget> children=[
     Text("op1"),
     Text("op2"),
     Text("op3"),
   ];
+  
   List <bool> isSelected=[true,false,true];
 
   @override
@@ -29,11 +32,19 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
           children: [
             Expanded(
               child: ListView(
-                children: const [
+                children:  [
                   ListTile(
                     leading: Icon(Icons.phonelink_lock_rounded),
                     title: Text("Lockscreen Notification"),
-                    trailing: Icon(Icons.toggle_off_outlined),
+                    trailing:Switch(value: val, onChanged: (value) {
+                      setState(() {
+                        if(val==false){
+                          val=true;
+                        }else{
+                          val=false;
+                        }
+                      });
+                    },)
                   ),
                   ListTile(
                     leading: Icon(Icons.lock_outline_rounded),

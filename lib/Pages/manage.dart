@@ -58,7 +58,7 @@ List<Color> colors=[
 ];
   
 List<String> names=[
-  'Payouts',
+  'Payments',
   'Discount Coupons',
   'Audience',
   'Dukaan Plugins',

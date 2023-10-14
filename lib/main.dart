@@ -38,8 +38,8 @@ class _MyAppState extends State<MyApp> {
       title: 'dukaan-clone',
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: Color(0xff136eb4)),
-        //colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 243, 240, 240)),
-        useMaterial3: true,
+        //colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(0, 255, 255, 255)),
+         //useMaterial3: true,
       ),
       
       home: Scaffold(

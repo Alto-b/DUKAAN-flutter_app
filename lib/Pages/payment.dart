@@ -17,28 +17,54 @@ class PaymentPage extends StatelessWidget {
           ),
 
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: 20,),
-              Text("Transaction limit",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 20),),
-              SizedBox(height: 10,),
-              Text("A free limit up to which you will recieve the online payments directly in your bank",),
-              SizedBox(height: 20,),
-              LinearProgressIndicator(
-                value: 0.8,
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(width: 0),
+                              borderRadius: BorderRadius.circular(50),
+                              
+                              
+                              ),
+                  //child: SizedBox(height: 20,),
+                  child: Column(
+                    children: [
+                      SizedBox(height:10),
+                         Padding(
+                           padding: const EdgeInsets.all(8.0),
+                           child: Text("Transaction limit",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 20),),
+                         ),
+                         SizedBox(height:10),
+                         SizedBox(height: 10,),
+                         Padding(
+                           padding: const EdgeInsets.all(8.0),
+                           child: Text("A free limit up to which you will recieve the online payments directly in your bank",),
+                         ),
+                         SizedBox(height: 20,),
+                         Padding(
+                           padding: const EdgeInsets.all(5.0),
+                           child: LinearProgressIndicator(
+                                                 value: 0.8,
+                                         ),
+                         ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text("₹10,000 left out of ₹1,00,000",style: TextStyle(color: Colors.grey),),
+                  ],
+                ),
+                SizedBox(height: 20,),
+                ElevatedButton(onPressed: (){}, child: Text("Increase Limit")),
+                SizedBox(height: 20,),
+              
+                    ],
+                  ),
+                  ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text("₹10,000 left out of ₹1,00,000",style: TextStyle(color: Colors.grey),),
-                ],
-              ),
-              SizedBox(height: 20,),
-              ElevatedButton(onPressed: (){}, child: Text("Increase Limit")),
-              SizedBox(height: 40,),
-
+             SizedBox(height: 30,),
               //set1
               Row(  
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,

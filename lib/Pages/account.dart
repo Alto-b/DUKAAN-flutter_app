@@ -88,7 +88,9 @@ class _AccountPageState extends State<AccountPage> {
                       trailing: Icon(Icons.keyboard_arrow_down_outlined),
                     ),
                     ListTile(
-                      leading: Icon(Icons.settings),onTap: (){},
+                      leading: Icon(Icons.settings),onTap: (){
+                        //Navigator.push(context, MaterialPageRoute(builder: (context) => ()));
+                      },
                       title: Text("Store Settings"),
                       trailing: Icon(Icons.keyboard_arrow_down_outlined),
                     ),

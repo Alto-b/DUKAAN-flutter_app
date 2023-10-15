@@ -9,6 +9,8 @@ class ProductsPage extends StatefulWidget {
 
 class _ProductsPageState extends State<ProductsPage> {
 
+   bool val=false;
+
   List<String> products=[
     "IPhone",
     "Samsung",
@@ -67,8 +69,34 @@ class _ProductsPageState extends State<ProductsPage> {
                     Text(products[index],style:TextStyle(fontSize: 16,fontWeight: FontWeight.w700),),
                     Text(model[index],style: TextStyle(fontSize: 15),),
                     Text('₹${price[index]}',style: TextStyle(fontSize: 15),),
-                    Text('In Stock',style: TextStyle(color: Colors.green),),
-      
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('In Stock',style: TextStyle(color: Colors.green),),
+                    //     Switch(value: val, onChanged: (value) {
+                    //   setState(() {
+                    //     if(val==false){
+                    //       val=true;
+                    //     }else{
+                    //       val=false;
+                    //     }
+                    //   });
+                    // },)
+                      ],
+                    ),  
+                    Row(
+                      mainAxisAlignment:MainAxisAlignment.start ,
+                      children: [
+                       Switch(value: val, onChanged: (value) {
+                      setState(() {
+                        if(val==false){
+                              val=true;
+                        }else{
+                          val=false;
+                        }
+                      });
+                    },)
+                    ],),   
                   ],
                 ),
                 trailing: Padding(
@@ -81,6 +109,7 @@ class _ProductsPageState extends State<ProductsPage> {
                     ],
                   ),
                 ),
+                
               ),
             );
           }

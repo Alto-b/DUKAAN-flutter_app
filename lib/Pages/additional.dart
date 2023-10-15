@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class AdditionalInfo extends StatefulWidget {
@@ -10,13 +10,7 @@ class AdditionalInfo extends StatefulWidget {
 
 class _AdditionalInfoState extends State<AdditionalInfo> {
   bool val=false;
-  List<Widget> children=[
-    Text("op1"),
-    Text("op2"),
-    Text("op3"),
-  ];
-  
-  List <bool> isSelected=[true,false,true];
+
 
   @override
   Widget build(BuildContext context) {
